@@ -45,7 +45,7 @@ p {
 	height: 48px;
 	color: white;
 	background-color:#ff944d;
-	border-style: none
+	border-style: none;
 	padding: 10px;
 }
 
@@ -65,12 +65,8 @@ p {
 	color: white;
 	height: 48px;
 	border-style: none;
-<<<<<<< HEAD
 	background-color:#ff944d;
-=======
-	background-color: transparent;
 	padding: 10px;
->>>>>>> refs/remotes/origin/master
 }
 
 .value option {
@@ -88,12 +84,8 @@ p {
 	color: white;
 	height: 48px;
 	border-style: none;
-<<<<<<< HEAD
 	background-color:#ff944d;
-=======
-	background-color: transparent;
 	padding: 10px;
->>>>>>> refs/remotes/origin/master
 }
 
 .time option {
