@@ -50,7 +50,6 @@ function createDropDownMonths()
 	}
 }
 
-
 function createDropDownYears()
 {
 	var minYears = 1,
@@ -77,10 +76,11 @@ function calculate()
 	var choice = type.options[type.selectedIndex].value;
 	var dropdown = document.getElementById('selectType');
 	var num = dropdown.options[dropdown.selectedIndex].value;
+	var totalDays;
 
 	if(choice == "days")
 	{
-
+		totalDays = num;
 		calculateAll(totalDays);
 	}
 	else if(choice == "months")
@@ -90,12 +90,21 @@ function calculate()
 	}
 	else if(choice == "years")
 	{
-		totalDays = num*365;
+		totalDays = num*365.0;
 		calculateAll(totalDays);
 	}
 }
 
 function calculateAll(totalDays)
 {
-	
+	/*calculate losses only*/
+	var losses = (499500/65.175)/totalDays;
+	/*calculate wins only*/
+	var wins = (499500/98.92)/totalDays;
+	/*calculate average*/
+	var average = (499500/82.0475)/totalDays;
+
+	document.getElementById('losses').innerHTML = "Losses: " + losses.toFixed(0);
+	document.getElementById('wins').innerHTML = "Wins: " + wins.toFixed(0);
+	document.getElementById('average').innerHTML = "Average: " + average.toFixed(0);
 }
