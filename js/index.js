@@ -70,6 +70,11 @@ function clearAllOptions()
 	document.getElementById('selectType').options.length = 0;
 }
 
+function callCalculate()
+{
+	var own = document.getElementById('ownChoice');
+}
+
 function champions()
 {
 	var type = document.getElementById('timeType');
