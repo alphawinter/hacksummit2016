@@ -18,7 +18,7 @@
 
 .welcome img {
 	padding: 0px;
-	height: 200px;
+	height: 100px;
 }
 
 body {
@@ -46,6 +46,7 @@ p {
 	color: white;
 	background-color:#ff944d;
 	border-style: none
+	padding: 10px;
 }
 
 .own option {
@@ -64,7 +65,12 @@ p {
 	color: white;
 	height: 48px;
 	border-style: none;
+<<<<<<< HEAD
 	background-color:#ff944d;
+=======
+	background-color: transparent;
+	padding: 10px;
+>>>>>>> refs/remotes/origin/master
 }
 
 .value option {
@@ -82,7 +88,12 @@ p {
 	color: white;
 	height: 48px;
 	border-style: none;
+<<<<<<< HEAD
 	background-color:#ff944d;
+=======
+	background-color: transparent;
+	padding: 10px;
+>>>>>>> refs/remotes/origin/master
 }
 
 .time option {
