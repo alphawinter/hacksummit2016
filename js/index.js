@@ -70,14 +70,16 @@ function clearAllOptions()
 	document.getElementById('selectType').options.length = 0;
 }
 
-function callCalculate()
+function calculate()
 {
 	var choice = document.getElementById('ownChoice');
 	var own = choice.options[choice.selectedIndex].value;
+	var totalDays = calculateTotalDays();
 
 	if(own == "own-champs")
 	{
-		champions();
+		var ip = 499500;
+		calculateAll(totalDays, ip);
 	}
 	else if(own == "own-runes")
 	{
@@ -89,7 +91,7 @@ function callCalculate()
 	}
 }
 
-function champions()
+function calculateTotalDays()
 {
 	var type = document.getElementById('timeType');
 	var choice = type.options[type.selectedIndex].value;
@@ -109,17 +111,18 @@ function champions()
 	{
 		totalDays = num*365.0;
 	}
-	calculateChampions(totalDays);
+
+	return totalDays;
 }
 
-function calculateChampions(totalDays)
+function calculateAll(totalDays, ip)
 {
 	/*calculate losses only*/
-	var losses = (499500/65.175)/totalDays;
+	var losses = (ip/65.175)/totalDays;
 	/*calculate wins only*/
-	var wins = (499500/98.92)/totalDays;
+	var wins = (ip/98.92)/totalDays;
 	/*calculate average*/
-	var average = (499500/82.0475)/totalDays;
+	var average = (ip/82.0475)/totalDays;
 
 	printToScreen(losses, wins, average);
 }
@@ -135,17 +138,14 @@ function runes()
 	if(choice == "days")
 	{
 		totalDays = num;
-		calculateAllRunes(totalDays);
 	}
 	else if(choice == "months")
 	{
 		totalDays = num*30.0;
-		calculateAllRunes(totalDays);
 	}
 	else if(choice == "years")
 	{
 		totalDays = num*365.0;
-		calculateAllRunes(totalDays);
 	}
 }
 
