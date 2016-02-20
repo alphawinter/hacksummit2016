@@ -13,16 +13,12 @@
 
 .welcome h1{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 150px;
+	font-size: 90px;
 }
 
 .welcome img {
 	padding: 0px;
 	height: 200px;
-}
-
-.product p {
-	color: black;
 }
 
 body {
