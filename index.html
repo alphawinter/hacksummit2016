@@ -2,39 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+
+   <!--FONTS-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   
   <!--CSS-->
   <link href="css/index.css" rel="stylesheet">
 
+<body class="body" id="body">
 <div class="question" id="question">
-  <h1>How long will it take to 
+  <center>
+  <h1>Select Options: 
     
-    <div class="own" id="id">(placeholder)
-    [own all champions
-    /own all runes
-    /own everything]
+    <div class="own" id="id">
+      <select>
+        <option value="own-champs" id="own-champs">Own All Champions</option>
+        <option value="weeks" id="own-runes">Own All Runes</option>
+        <option value="own-all" id="own-all">Own Everything</option>
+      </select>
     </div>
    </h1>
   <h1>
-    in (#)
     <div class="value" id="value">
-      
     <select>
       <option value="days" id="days">Days</option>
       <option value="weeks" id="weeks">Weeks</option>
       <option value="months" id="months">Months</option>
       <option value="years" id="years">Years</option>
       </select>
+      
+      <select id="selectDays"></select>
+      <select id="selectMonths"></select>
+      <select id="selectYears"></select>
+      
     </div>
   </h1>
+  </center>
 </div>
 
-
+<center>
 <h1>Answer:</h1>
 <div id="losses"></div>
 <div id="wins"></div>
 <div id="average"></div>
+  </center>
+</body>
 
   <!--JAVASCRIPT-->
   <script src="./js/index.js"></script>
