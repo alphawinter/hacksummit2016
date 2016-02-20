@@ -4,9 +4,20 @@
 	display: none;
 }
 
+.welcome {
+	padding: 0;
+	height: 80vh;
+	margin: 0;
+}
+
+.welcome h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 200px;
+
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
-	padding-top: 100px;
 	background-color:#ff944d;
 }
 

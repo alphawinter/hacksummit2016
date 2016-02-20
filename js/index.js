@@ -1,5 +1,5 @@
 /*JAVASCRIPT*/
-
+window.onload=createDropDownDays;
 function callCreateDropDown()
 {
 	var type = document.getElementById('timeType');
