@@ -93,6 +93,21 @@ p {
 	display: none;
 }
 
+#ownChoice, #selectType, #timeType{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: none;
+    background: transparent url("http://i.imgur.com/9sBmTWZ.png") no-repeat right center;
+  }
+
+ select{
+ 	text-align-last: center; text-align: center;
+	-ms-text-align-last: center;
+	-moz-text-align-last: center; text-align-last: center;
+ }
+
 /*BUTTON*/
 button {
 	font-family: 'Open Sans', sans-serif;
