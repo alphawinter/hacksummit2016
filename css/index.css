@@ -78,6 +78,10 @@ p {
 	background-color: transparent;
 }
 
+#hideThis{
+	display: none;
+}
+
 /*BUTTON*/
 button {
 	font-family: 'Open Sans', sans-serif;
