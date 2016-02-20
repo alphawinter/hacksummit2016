@@ -104,7 +104,10 @@ function calculateAll(totalDays)
 	/*calculate average*/
 	var average = (499500/82.0475)/totalDays;
 
-	document.getElementById('losses').innerHTML = "Losses: " + losses.toFixed(0);
-	document.getElementById('wins').innerHTML = "Wins: " + wins.toFixed(0);
-	document.getElementById('average').innerHTML = "Average: " + average.toFixed(0);
+	document.getElementById('losses').innerHTML = "If you lose all games (65.175 IP per 35 minute game), it would take " 
+	+ losses.toFixed(0) + " games per day.";
+	document.getElementById('wins').innerHTML = "If you win all games (98.92 IP per 35 minute game), it would take "  
+	+ wins.toFixed(0) + " games per day.";
+	document.getElementById('average').innerHTML = "On average, with wins/losses equal (82.0475 IP per 35 minute game), it would take " 
+	+ average.toFixed(0) + " games per day.";
 }
