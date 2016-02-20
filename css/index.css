@@ -5,19 +5,24 @@
 }
 
 .welcome {
-	padding: 0;
+	padding: 0px;
 	height: 80vh;
-	margin: 0;
+	margin: 0px;
 	width: 100%;
 }
 
 .welcome h1{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 200px;
+	font-size: 150px;
 }
 
 .welcome img {
-	position: relative;
+	padding: 0px;
+	height: 200px;
+}
+
+.product p {
+	color: black;
 }
 
 body {
