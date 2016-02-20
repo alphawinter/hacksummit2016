@@ -21,6 +21,10 @@
 	height: 100px;
 }
 
+.welcome p {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-color:#ff944d;
@@ -136,8 +140,6 @@ button {
 	border: none; 
 	padding: 5px;
 }
-
-/*ANSWER*/
 
 
 /*FOOTER*/
