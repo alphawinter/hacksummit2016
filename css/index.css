@@ -1,4 +1,9 @@
 /*CSS*/
+
+#hideThis{
+	display: none;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	padding-top: 100px;
@@ -95,5 +100,7 @@ button {
 .footer p 
 {
 	font-family: 'Open Sans', sans-serif;
+	color: black;
+	opacity: 0.6;
 	font-size: 12px;
 }
