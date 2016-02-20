@@ -1,3 +1,4 @@
 $(function () {
-	$("#id").selectbox();
+	$("#ownChoice").selectbox();
+	("#own-champs").selectbox();
 });
