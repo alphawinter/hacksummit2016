@@ -75,20 +75,24 @@ function calculate()
 	var choice = document.getElementById('ownChoice');
 	var own = choice.options[choice.selectedIndex].value;
 	var totalDays = calculateTotalDays();
+	var ipChamps = 499500,
+		ipRunes = 67240,
+		ip;
 
 	if(own == "own-champs")
 	{
-		var ip = 499500;
-		calculateAll(totalDays, ip);
+		ip = ipChamps;
 	}
 	else if(own == "own-runes")
 	{
-		runes();
+		ip = ipRunes;
 	}
 	else if(own == "own-all")
 	{
-		all();
+		ip = ipChamps+ipRunes;
 	}
+
+	calculateAll(totalDays, ip);
 }
 
 function calculateTotalDays()
@@ -126,29 +130,6 @@ function calculateAll(totalDays, ip)
 
 	printToScreen(losses, wins, average);
 }
-
-function runes()
-{
-	var type = document.getElementById('timeType');
-	var choice = type.options[type.selectedIndex].value;
-	var dropdown = document.getElementById('selectType');
-	var num = dropdown.options[dropdown.selectedIndex].value;
-	var totalDays;
-
-	if(choice == "days")
-	{
-		totalDays = num;
-	}
-	else if(choice == "months")
-	{
-		totalDays = num*30.0;
-	}
-	else if(choice == "years")
-	{
-		totalDays = num*365.0;
-	}
-}
-
 
 function printToScreen(losses, wins, average)
 {
