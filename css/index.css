@@ -2,4 +2,67 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	padding-top: 100px;
+	background-color:#ff944d;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	font-size: 48px;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	color:white;
+	font-size: 24px;
+}
+
+/*Dropdowns*/
+.own select {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	background-color: transparent;
+	border-style: none;
+}
+
+.own option {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	border-style: none;
+	background-color: transparent;
+}
+
+
+.value select {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	border-style: none;
+	background-color: transparent;
+}
+
+.value option {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	border-style: none;
+	background-color: transparent;
+}
+
+.time select {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	border-style: none;
+	background-color: transparent;
+}
+
+.time option {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	border-style: none;
+	background-color: transparent;
 }
