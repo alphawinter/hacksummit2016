@@ -24,18 +24,16 @@
    </h1>
   <h1>
     <div class="value" id="value">
-    <select>
+    <select id="timeType" onchange="clearAllOptions();callCreateDropDown();">
       <option value="days" id="days">Days</option>
-      <option value="weeks" id="weeks">Weeks</option>
       <option value="months" id="months">Months</option>
       <option value="years" id="years">Years</option>
       </select>
-      
-      <select id="selectDays"></select>
-      <select id="selectMonths"></select>
-      <select id="selectYears"></select>
-      
     </div>
+    
+      <div class="time" id="time">
+      <select id="selectType"></select>
+      </div>
   </h1>
   </center>
 </div>
