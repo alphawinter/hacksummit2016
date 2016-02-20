@@ -18,7 +18,7 @@
 
 .welcome img {
 	padding: 0px;
-	height: 200px;
+	height: 100px;
 }
 
 body {
@@ -46,6 +46,7 @@ p {
 	color: white;
 	background-color: transparent;
 	border-style: none
+	padding: 10px;
 }
 
 .own option {
@@ -65,6 +66,7 @@ p {
 	height: 48px;
 	border-style: none;
 	background-color: transparent;
+	padding: 10px;
 }
 
 .value option {
@@ -83,6 +85,7 @@ p {
 	height: 48px;
 	border-style: none;
 	background-color: transparent;
+	padding: 10px;
 }
 
 .time option {
