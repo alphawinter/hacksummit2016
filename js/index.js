@@ -72,7 +72,21 @@ function clearAllOptions()
 
 function callCalculate()
 {
-	var own = document.getElementById('ownChoice');
+	var choice = document.getElementById('ownChoice');
+	var own = choice.options[choice.selectedIndex].value;
+
+	if(own == "own-champs")
+	{
+		champions();
+	}
+	else if(own == "own-runes")
+	{
+		runes();
+	}
+	else if(own == "own-all")
+	{
+		all();
+	}
 }
 
 function champions()
@@ -86,21 +100,19 @@ function champions()
 	if(choice == "days")
 	{
 		totalDays = num;
-		calculateAllChampions(totalDays);
 	}
 	else if(choice == "months")
 	{
 		totalDays = num*30.0;
-		calculateAllChampions(totalDays);
 	}
 	else if(choice == "years")
 	{
 		totalDays = num*365.0;
-		calculateAllChampions(totalDays);
 	}
+	calculateChampions(totalDays);
 }
 
-function calculateAllChampions(totalDays)
+function calculateChampions(totalDays)
 {
 	/*calculate losses only*/
 	var losses = (499500/65.175)/totalDays;
