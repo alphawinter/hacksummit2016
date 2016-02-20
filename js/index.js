@@ -70,12 +70,31 @@ function clearAllOptions()
 	document.getElementById('selectType').options.length = 0;
 }
 
-function callCalculate()
+function calculate()
 {
-	var own = document.getElementById('ownChoice');
+	var choice = document.getElementById('ownChoice');
+	var own = choice.options[choice.selectedIndex].value;
+	var totalDays = calculateTotalDays();
+	var ipChamps = 499500,
+		ipRunes = 67240,
+		ip;
+
+	if(own == "own-champs")
+	{
+		ip = ipChamps;
+	}
+	else if(own == "own-runes")
+	{
+		ip = ipRunes;
+	}
+	else if(own == "own-all")
+	{
+		ip = ipChamps+ipRunes;
+	}
+	calculateAll(totalDays, ip);
 }
 
-function champions()
+function calculateTotalDays()
 {
 	var type = document.getElementById('timeType');
 	var choice = type.options[type.selectedIndex].value;
@@ -86,57 +105,30 @@ function champions()
 	if(choice == "days")
 	{
 		totalDays = num;
-		calculateAllChampions(totalDays);
 	}
 	else if(choice == "months")
 	{
 		totalDays = num*30.0;
-		calculateAllChampions(totalDays);
 	}
 	else if(choice == "years")
 	{
 		totalDays = num*365.0;
-		calculateAllChampions(totalDays);
 	}
+
+	return totalDays;
 }
 
-function calculateAllChampions(totalDays)
+function calculateAll(totalDays, ip)
 {
 	/*calculate losses only*/
-	var losses = (499500/65.175)/totalDays;
+	var losses = (ip/65.175)/totalDays;
 	/*calculate wins only*/
-	var wins = (499500/98.92)/totalDays;
+	var wins = (ip/98.92)/totalDays;
 	/*calculate average*/
-	var average = (499500/82.0475)/totalDays;
+	var average = (ip/82.0475)/totalDays;
 
 	printToScreen(losses, wins, average);
 }
-
-function runes()
-{
-	var type = document.getElementById('timeType');
-	var choice = type.options[type.selectedIndex].value;
-	var dropdown = document.getElementById('selectType');
-	var num = dropdown.options[dropdown.selectedIndex].value;
-	var totalDays;
-
-	if(choice == "days")
-	{
-		totalDays = num;
-		calculateAllRunes(totalDays);
-	}
-	else if(choice == "months")
-	{
-		totalDays = num*30.0;
-		calculateAllRunes(totalDays);
-	}
-	else if(choice == "years")
-	{
-		totalDays = num*365.0;
-		calculateAllRunes(totalDays);
-	}
-}
-
 
 function printToScreen(losses, wins, average)
 {
