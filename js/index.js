@@ -70,7 +70,7 @@ function clearAllOptions()
 	document.getElementById('selectType').options.length = 0;
 }
 
-function calculate()
+function champions()
 {
 	var type = document.getElementById('timeType');
 	var choice = type.options[type.selectedIndex].value;
@@ -81,21 +81,21 @@ function calculate()
 	if(choice == "days")
 	{
 		totalDays = num;
-		calculateAll(totalDays);
+		calculateAllChampions(totalDays);
 	}
 	else if(choice == "months")
 	{
 		totalDays = num*30.0;
-		calculateAll(totalDays);
+		calculateAllChampions(totalDays);
 	}
 	else if(choice == "years")
 	{
 		totalDays = num*365.0;
-		calculateAll(totalDays);
+		calculateAllChampions(totalDays);
 	}
 }
 
-function calculateAll(totalDays)
+function calculateAllChampions(totalDays)
 {
 	/*calculate losses only*/
 	var losses = (499500/65.175)/totalDays;
@@ -104,6 +104,37 @@ function calculateAll(totalDays)
 	/*calculate average*/
 	var average = (499500/82.0475)/totalDays;
 
+	printToScreen(losses, wins, average);
+}
+
+function runes()
+{
+	var type = document.getElementById('timeType');
+	var choice = type.options[type.selectedIndex].value;
+	var dropdown = document.getElementById('selectType');
+	var num = dropdown.options[dropdown.selectedIndex].value;
+	var totalDays;
+
+	if(choice == "days")
+	{
+		totalDays = num;
+		calculateAllRunes(totalDays);
+	}
+	else if(choice == "months")
+	{
+		totalDays = num*30.0;
+		calculateAllRunes(totalDays);
+	}
+	else if(choice == "years")
+	{
+		totalDays = num*365.0;
+		calculateAllRunes(totalDays);
+	}
+}
+
+
+function printToScreen(losses, wins, average)
+{
 	document.getElementById('losses').innerHTML = "If you lose all games (65.175 IP per 35 minute game), it would take " 
 	+ losses.toFixed(0) + " games per day.";
 	document.getElementById('wins').innerHTML = "If you win all games (98.92 IP per 35 minute game), it would take "  
