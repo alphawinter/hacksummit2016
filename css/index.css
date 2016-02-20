@@ -115,6 +115,18 @@ p {
 	-moz-text-align-last: center; text-align-last: center;
  }
 
+ table{
+ 	text-align: right;
+ 	font-family: 'Open Sans', sans-serif;
+	color:white;
+	font-size: 24px;
+ }
+
+ #losses2, #wins2, #avg2{
+ 	color: #33adff;
+ 	font-weight: bold;
+ }
+
 /*BUTTON*/
 button {
 	font-family: 'Open Sans', sans-serif;

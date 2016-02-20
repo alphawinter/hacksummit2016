@@ -137,10 +137,15 @@ function calculateAll(totalDays, ip)
 
 function printToScreen(losses, wins, average)
 {
-	document.getElementById('losses').innerHTML = "If you lose all games (65.175 IP per 35 minute game), it would take " 
-	+ losses.toFixed(0) + " games per day.";
-	document.getElementById('wins').innerHTML = "If you win all games (98.92 IP per 35 minute game), it would take "  
-	+ wins.toFixed(0) + " games per day.";
-	document.getElementById('average').innerHTML = "On average, with wins/losses equal (82.0475 IP per 35 minute game), it would take " 
-	+ average.toFixed(0) + " games per day.";
+	document.getElementById('losses1').innerHTML = "If you lose all games (65.175 IP per 35 minute game), it would take ";
+	document.getElementById('losses2').innerHTML = losses.toFixed(0);
+	document.getElementById('losses3').innerHTML = " games per day.";
+
+	document.getElementById('wins1').innerHTML = "If you win all games (98.92 IP per 35 minute game), it would take ";
+	document.getElementById('wins2').innerHTML = wins.toFixed(0);
+	document.getElementById('wins3').innerHTML = " games per day.";
+
+	document.getElementById('avg1').innerHTML = "On average, with wins/losses equal (82.0475 IP per 35 minute game), it would take ";
+	document.getElementById('avg2').innerHTML = average.toFixed(0);
+	document.getElementById('avg3').innerHTML = " games per day.";
 }
