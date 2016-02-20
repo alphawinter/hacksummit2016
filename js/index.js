@@ -77,6 +77,7 @@ function calculate()
 	var totalDays = calculateTotalDays();
 	var ipChamps = 499500,
 		ipRunes = 67240,
+		pages = 50400,
 		ip;
 
 	if(own == "own-champs")
@@ -87,9 +88,13 @@ function calculate()
 	{
 		ip = ipRunes;
 	}
+	else if(own == "own-runepages")
+	{
+		ip = ipRunes+pages;
+	}
 	else if(own == "own-all")
 	{
-		ip = ipChamps+ipRunes;
+		ip = ipChamps+ipRunes+pages;
 	}
 	calculateAll(totalDays, ip);
 }
