@@ -72,3 +72,24 @@ p {
 	border-style: none;
 	background-color: transparent;
 }
+
+/*BUTTON*/
+button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	color: white;
+	background-color: #33adff;
+	border: none; 
+	padding: 5px;
+}
+
+/*ANSWER*/
+
+
+/*FOOTER*/
+
+.footer p 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
