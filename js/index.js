@@ -91,7 +91,6 @@ function calculate()
 	{
 		ip = ipChamps+ipRunes;
 	}
-
 	calculateAll(totalDays, ip);
 }
 
