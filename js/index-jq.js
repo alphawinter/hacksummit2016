@@ -1,3 +1,3 @@
 $(function () {
-	$("#own-champs").selectbox();
+	$("#id").selectbox();
 });
