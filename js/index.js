@@ -70,3 +70,32 @@ function clearAllOptions()
 {
 	document.getElementById('selectType').options.length = 0;
 }
+
+function calculate()
+{
+	var type = document.getElementById('timeType');
+	var choice = type.options[type.selectedIndex].value;
+	var dropdown = document.getElementById('selectType');
+	var num = dropdown.options[dropdown.selectedIndex].value;
+
+	if(choice == "days")
+	{
+
+		calculateAll(totalDays);
+	}
+	else if(choice == "months")
+	{
+		totalDays = num*30.0;
+		calculateAll(totalDays);
+	}
+	else if(choice == "years")
+	{
+		totalDays = num*365;
+		calculateAll(totalDays);
+	}
+}
+
+function calculateAll(totalDays)
+{
+	
+}
