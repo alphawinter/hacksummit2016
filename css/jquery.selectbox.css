@@ -80,13 +80,13 @@
 	padding: 7px 0 7px 3px;
 }
 .sbOptions a:link, .sbOptions a:visited{
-	color: #ddd;
+	color: black;
 	text-decoration: none;
 }
 .sbOptions a:hover,
 .sbOptions a:focus,
 .sbOptions a.sbFocus{
-	color: #EBB52D;
+	color: white;
 }
 .sbOptions li.last a{
 	border-bottom: none;
